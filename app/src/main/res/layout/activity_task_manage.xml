@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tasks.TaskManageActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ToolBar_task_manage"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/style_rounded_toolbar"
+        android:backgroundTint="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="@string/title_task_manage"
+        app:titleTextColor="?attr/colorOnSecondary" />
+
+    <ImageView
+        android:id="@+id/ImageView_task_manage_child_portrait"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/CONTENT_DESCRIPTION"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ToolBar_task_manage" />
+
+    <TextView
+        android:id="@+id/TextView_task_manage_child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="none"
+        android:maxLines="5"
+        android:scrollHorizontally="false"
+        android:text="@string/DEFAULT_TEXT"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageView_task_manage_child_portrait"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/TextView_task_manage_task_name_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/subtitle_tasks_task_name"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView_task_manage_child_name" />
+
+    <TextView
+        android:id="@+id/TextView_task_manage_task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="none"
+        android:maxLines="5"
+        android:scrollHorizontally="false"
+        android:text="@string/DEFAULT_TEXT"
+        android:textColor="?attr/colorPrimaryVariant"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView_task_manage_task_name_subtitle" />
+
+    <Button
+        android:id="@+id/Button_task_manage_complete_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="125dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/style_rounded_button_20"
+        android:backgroundTint="?attr/colorPrimaryVariant"
+        android:backgroundTintMode="src_in"
+        android:text="@string/button_task_manage_complete_task"
+        android:textColor="?attr/colorOnSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/Button_task_manage_history"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/style_rounded_button_20"
+        android:backgroundTint="?attr/colorPrimaryVariant"
+        android:backgroundTintMode="src_in"
+        android:text="@string/button_task_manage_history"
+        android:textColor="?attr/colorOnSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.coinflip.ChildQueueActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ToolBar_child_queue"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/style_rounded_toolbar"
+        android:backgroundTint="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        app:title="@string/title_child_queue"
+        app:titleTextColor="?attr/colorOnSecondary" />
+
+    <ImageView
+        android:id="@+id/ImageView_child_queue_current_child_portrait"
+        android:layout_width="92dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="30dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/CONTENT_DESCRIPTION"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ToolBar_child_queue" />
+
+    <TextView
+        android:id="@+id/TextView_child_queue_current_child_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/subtitle_child_queue_current_child"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageView_child_queue_current_child_portrait"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/TextView_child_queue_current_child_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/DEFAULT_TEXT"
+        android:textAlignment="center"
+        android:textColor="?attr/colorSecondaryVariant"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView_child_queue_current_child_subtitle"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/TextView_child_queue_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/subtitle_child_queue"
+        android:textAllCaps="true"
+        android:textColor="?attr/colorSecondaryVariant"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextView_child_queue_current_child_name"
+        tools:ignore="TextContrastCheck" />
+
+    <ListView
+        android:id="@+id/ListView_child_queue"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:divider="?attr/colorOnPrimary"
+        android:dividerHeight="10dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextView_child_queue_subtitle" />
+
+    <TextView
+        android:id="@+id/TextView_child_queue_empty_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/empty_state_coin_flip_no_children"
+        android:textColor="?attr/colorSecondaryVariant"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/ListView_child_queue"
+        app:layout_constraintEnd_toEndOf="@+id/ListView_child_queue"
+        app:layout_constraintStart_toStartOf="@+id/ListView_child_queue"
+        app:layout_constraintTop_toTopOf="@+id/ListView_child_queue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
